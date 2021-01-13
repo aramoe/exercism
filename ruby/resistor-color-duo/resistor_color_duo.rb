@@ -1,8 +1,10 @@
-=begin
-Write your code for the 'Resistor Color Duo' exercise in this file. Make the tests in
-`resistor_color_duo_test.rb` pass.
+class ResistorColorDuo
+  COLORS = %w( black brown red orange yellow green blue violet grey white )
 
-To get started with TDD, see the `README.md` file in your
-`ruby/resistor-color-duo` directory.
-=end
-
+  def self.value(names)
+    names[0, 2] # take duo
+      .map{|name| COLORS.index(name).to_s }
+      .join('')
+      .to_i
+  end
+end
