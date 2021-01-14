@@ -17,4 +17,14 @@ class TwoFerTest < Minitest::Test
     # skip
     assert_equal "One for Bob, one for me.", TwoFer.two_fer("Bob")
   end
+
+  def test_no_name_given_ja
+    # skip
+    assert_equal "君にひとつ、私にひとつ。", TwoFer.two_fer(nil, :Japanese)
+  end
+
+  def test_a_name_given_ja
+    # skip
+    assert_equal "太郎にひとつ、私にひとつ。", TwoFer.two_fer("太郎", :Japanese)
+  end
 end
