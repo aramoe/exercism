@@ -1,4 +1,4 @@
 class Acronym
   def self.abbreviate(str) =
-    str.split(/[- ]+/).map{|s| s[0].upcase }.join
+    str.split(/[- ]+/).map(&:chr).join.upcase
 end
