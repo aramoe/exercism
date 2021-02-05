@@ -1,10 +1,6 @@
 class Pangram
+  # https://exercism.io/tracks/ruby/exercises/pangram/solutions/22f522356fc34433b3e9051768d7b5fc
   def self.pangram?(sentence)
-    sentence
-      .downcase
-      .chars
-      .grep(/[a-z]/)
-      .sort
-      .uniq == ('a'..'z').to_a
+    ([*'a'..'z'] - sentence.downcase.chars).empty?
   end
 end
