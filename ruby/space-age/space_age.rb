@@ -15,9 +15,9 @@ class SpaceAge
     Neptune: 164.79132
   }
 
-  TABLE.each_pair do |pl, ey|
-    define_method("on_#{pl.downcase}") do
-      on_earth / ey
+  TABLE.each do |planet, earth_year|
+    define_method("on_#{planet.downcase}") do
+      on_earth.fdiv(earth_year)
     end
   end
 end
